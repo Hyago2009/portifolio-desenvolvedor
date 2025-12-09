@@ -3,103 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyago Brito - Portfólio</title>
+    <title>Hyago Brito - Portfólio de Desenvolvimento de Sistemas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header id="home">
-        <nav class="navbar">
-            <img src="logo.png" alt="Logo Hyago Brito" class="logo">
-            <ul class="menu">
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-
-        <div class="header-content">
-            <h1>Hyago Brito</h1>
-            <p>Desenvolvimento de Sistemas • Web • Tecnologia</p>
-        </div>
-    </header>
-
-    <!-- ===== SOBRE ===== -->
-    <section class="sobre section" id="sobre">
-        <div class="container">
-            <h2>Sobre Mim</h2>
-            <p>
-                Olá! Meu nome é Hyago Brito, estudante de Desenvolvimento de Sistemas.
-                Sou apaixonado por tecnologia e por criar soluções que realmente façam diferença.
-                Busco sempre evoluir minhas habilidades em programação, desenvolvimento web,
-                lógica e boas práticas. Meu foco é transformar ideias em projetos funcionais,
-                modernos e eficientes.
-            </p>
-        </div>
-    </section>
-
-    <!-- ===== HABILIDADES ===== -->
-    <section class="habilidades section" id="habilidades">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-box">HTML</div>
-                <div class="skill-box">CSS</div>
-                <div class="skill-box">JavaScript</div>
-                <div class="skill-box">Git & GitHub</div>
-                <div class="skill-box">Lógica de Programação</div>
-                <div class="skill-box">Desenvolvimento Web</div>
+    <div class="portfolio-wrapper">
+        <header class="sidebar-header">
+            <div class="logo-area">
+                <img src="IMG/Logo nova.png" alt="Logo Hyago Brito" class="logo">
+                <div class="logo-text">
+                    <h1>Hyago Brito</h1>
+                    <span>Portifólio</span>
+                </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="profile-pic-container">
+                <img src="IMG/senai.png" alt="Foto de Perfil de Hyago Brito" class="profile-pic">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- ===== PROJETOS ===== -->
-    <section class="projetos section" id="projetos">
-        <div class="container">
-            <h2>Projetos</h2>
-            <div class="projetos-grid">
+        <main class="main-content">
+            <section class="hero-section" id="home">
+                <div class="hero-text">
+                    <h2>Hyago Brito</h2>
+                    <p>Desenvolvimento de Sistemas • Web • Tecnologia</p>
+                </div>
+            </section>
 
-                <div class="card">
-                    <h3>Projeto 1</h3>
-                    <p>Descrição do projeto. Algo que você desenvolveu ou está desenvolvendo.</p>
-                    <a href="#" class="btn">Ver Projeto</a>
+            <div class="content-grid">
+                <div class="left-column">
+                    <section class="about-section" id="sobre">
+                        <h3>Sobre Mim</h3>
+                        <p>
+                            Olá! Meu nome é Hyago Brito, sou estudante de Desenvolvimento de Sistemas.
+                            Minha jornada é focada em transformar ideias em projetos funcionais, modernos e eficientes, aplicando sempre as melhores
+                            práticas de desenvolvimento e lógica de programação. Estou em constante aprendizado para dominar novas tecnologias e
+                            entregar resultados de alto valor.
+                        </p>
+                    </section>
+
+                    <section class="contact-section" id="contato">
+                        <h3>Contato</h3>
+                        <p class="contact-intro">Desenvolvimento de Sistemas • Conectividade • Tecnologia.</p>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:contato@hyagobrito.com">hyago.brito@aluno.senai.br</a></p>
+                            <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511999999999" target="_blank">(11) 96257-0852</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/seulinkedin" target="_blank" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/seugithub" target="_blank" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/09__hyago" target="_blank" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </section>
                 </div>
 
-                <div class="card">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição do projeto. Algo que demonstre suas habilidades técnicas.</p>
-                    <a href="#" class="btn">Ver Projeto</a>
+                <div class="right-column">
+                    <section class="skills-section" id="habilidades">
+                        <h3>Habilidades Técnicas</h3>
+                        <div class="skills-grid">
+                            <div class="skill-box">HTML & CSS</div>
+                            <div class="skill-box">Lógica de Programação</div>
+                            <div class="skill-box">JavaScript Básico</div>
+                            <div class="skill-box">SQL (CRUD)</div>
+                            <div class="skill-box">Git & Versionamento</div>
+                            <div class="skill-box">Design Responsivo</div>
+                            <div class="skill-box">Python</div>
+                            <div class="skill-box">Terminal (CLI)</div>
+                            <div class="skill-box">Estrutura de Dados</div>
+                            <div class="skill-box">Metodologia BEM</div>
+                            <div class="skill-box">Testes Unitários</div>
+                        </div>
+                    </section>
+
+                    <section class="projects-section" id="projetos">
+                        <h3>Projetos</h3>
+                        <div class="projects-carousel">
+                            <div class="project-card">
+                                <h4>Sistema Integrado</h4>
+                                <p>Eu e meus companheiros fizemos um site sobre Registro de Qualidade da Empresa.</p>
+                                <a href="#" class="btn">Ver Projeto</a>
+                            </div>
+                            <div class="project-card">
+                                <h4>MartPlay</h4>
+                                <p>Aqui eu e meus companheiros fizemos um trabalho que tinhamos que fazer um site parecido com a globoplay.</p>
+                                <a href="#" class="btn">Ver Projeto</a>
+                            </div>
+                            <div class="project-card">
+                                <h4>Loja Online</h4>
+                                <p>Eu fiz uma página inicial simples para uma loja online, focando apenas na estrutura e formatação básica do HTML, já que não era permitido usar CSS.</p>
+                                <a href="#" class="btn">Ver Projeto</a>
+                            </div>
+                            <div class="project-card">
+                                <h4>Página WEB Saúde</h4>
+                                <p>Neste trabalho, eu desenvolvi uma página web completa e informativa sobre um tema de saúde relevante.</p>
+                                <a href="#" class="btn">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-
-                <div class="card">
-                    <h3>Projeto 3</h3>
-                    <p>Descrição do projeto. Pode ser acadêmico ou pessoal.</p>
-                    <a href="#" class="btn">Ver Projeto</a>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </main>
+    </div>
 
-    <!-- ===== CONTATO ===== -->
-    <section class="contato section" id="contato">
-        <div class="container">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo para conversar, tirar dúvidas ou iniciar um projeto!</p>
-
-            <div class="contato-box">
-                <p><strong>Email:</strong> seuemail@gmail.com</p>
-                <p><strong>Instagram:</strong> @seuuser</p>
-                <p><strong>WhatsApp:</strong> (xx) xxxxx-xxxx</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2025 - Hyago Brito | Portfólio</p>
+    <footer class="portfolio-footer">
+        <p>Copyright © 2025 Hyago Brito. Todos os direitos reservados.</p>
     </footer>
 
 </body>
