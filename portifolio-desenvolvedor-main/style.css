@@ -1,0 +1,474 @@
+/*
+=====================================================
+ESTILOS GERAIS E VARIÁVEIS (MANTIDOS)
+=====================================================
+*/
+:root {
+    --cor-fundo-principal: #1A1E2F;
+    --cor-fundo-card: #282E47;
+    --cor-texto-principal: #E0E0E0;
+    --cor-destaque: #FFFFFF;
+    --cor-acento: #4CAF50;
+    --cor-bordas: #3A415A;
+    --sombra-leve: 0 4px 10px rgba(0, 0, 0, 0.2);
+    --sombra-media: 0 8px 20px rgba(0, 0, 0, 0.4);
+    --borda-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-acento);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-destaque);
+}
+
+/*
+=====================================================
+LAYOUT PRINCIPAL (GRID)
+=====================================================
+*/
+.portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background-color: var(--cor-fundo-principal);
+    border-radius: var(--borda-radius);
+    margin: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra-media);
+}
+
+.main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*
+=====================================================
+BARRA LATERAL / HEADER
+=====================================================
+*/
+.sidebar-header {
+    background-color: var(--cor-fundo-card);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--cor-bordas);
+    align-items: center; /* Centraliza a foto e a logo na sidebar */
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column; /* Coloca logo e texto um abaixo do outro na sidebar */
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 60px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text h1 {
+    font-size: 1.4em;
+    color: var(--cor-destaque);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-text span {
+    font-size: 0.9em;
+    color: var(--cor-texto-principal);
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* -------------------------------------------------- */
+/* NOVO ESTILO: FOTO DE PERFIL */
+/* -------------------------------------------------- */
+.profile-pic-container {
+    width: 120px; /* Tamanho do contêiner da foto */
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 50%; /* Torna o contêiner circular */
+    overflow: hidden;
+    border: 4px solid var(--cor-acento); /* Borda verde de destaque */
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+    display: block;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+}
+/* -------------------------------------------------- */
+
+
+.main-nav {
+    width: 100%; /* Garante que o menu ocupe toda a largura */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-nav a {
+    color: var(--cor-texto-principal);
+    font-size: 1.1em;
+    padding: 10px 0;
+    display: block;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+    text-align: left; /* Garante que o texto volte para a esquerda */
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--cor-acento);
+    border-left: 3px solid var(--cor-acento);
+    transform: translateX(5px);
+}
+
+/* O resto do CSS (hero-section, content-grid, sections, skills-grid, projects-carousel, contact-section, footer e media queries) é mantido conforme a versão anterior. */
+
+
+/* ... (Restante do CSS, mantido inalterado) ... */
+
+
+/*
+=====================================================
+SEÇÃO HERO/INTRODUÇÃO
+=====================================================
+*/
+.hero-section {
+    padding: 40px 0;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-bordas);
+    margin-bottom: 30px;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.hero-text p {
+    font-size: 1.4em;
+    color: var(--cor-acento);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/*
+=====================================================
+GRID DE CONTEÚDO (DUAS COLUNAS)
+=====================================================
+*/
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+    gap: 40px; /* Espaço entre as colunas */
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre as seções dentro das colunas */
+}
+
+/* Títulos das seções internas */
+.about-section h3,
+.contact-section h3,
+.skills-section h3,
+.projects-section h3 {
+    font-size: 1.8em;
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-acento);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/*
+=====================================================
+SEÇÃO SOBRE MIM
+=====================================================
+*/
+.about-section p {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/*
+=====================================================
+SEÇÃO HABILIDADES
+=====================================================
+*/
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-box {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-principal);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--cor-bordas);
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    background-color: var(--cor-acento);
+    color: var(--cor-fundo-principal);
+    border-color: var(--cor-acento);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+/*
+=====================================================
+SEÇÃO PROJETOS (CARROSSEL HORIZONTAL)
+=====================================================
+*/
+.projects-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+    padding-bottom: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.projects-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.project-card {
+    flex-shrink: 0;
+    width: 280px;
+    scroll-snap-align: start;
+    background-color: var(--cor-fundo-card);
+    padding: 25px;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-leve);
+    text-align: center;
+    border: 1px solid var(--cor-bordas);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-acento);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.project-card h4 {
+    font-size: 1.4em;
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    color: var(--cor-texto-principal);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--cor-acento);
+    color: var(--cor-fundo-principal);
+    padding: 10px 20px;
+    border-radius: var(--borda-radius);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-principal);
+    transform: scale(1.05);
+}
+
+/*
+=====================================================
+SEÇÃO CONTATO
+=====================================================
+*/
+.contact-intro {
+    font-size: 0.95em;
+    color: var(--cor-texto-principal);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    color: var(--cor-destaque);
+}
+
+.contact-info a {
+    color: var(--cor-texto-principal);
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--cor-acento);
+}
+
+.social-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    /* Alinha à esquerda na coluna */
+    justify-content: flex-start; 
+}
+
+.social-links a {
+    color: var(--cor-destaque);
+    font-size: 2.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-acento);
+    transform: translateY(-5px);
+}
+
+/*
+=====================================================
+FOOTER
+=====================================================
+*/
+.portfolio-footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--cor-fundo-card);
+    border-top: 1px solid var(--cor-bordas);
+    color: var(--cor-texto-principal);
+    font-size: 0.85em;
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+
+/*
+=====================================================
+MEDIA QUERIES (RESPONSIVIDADE)
+=====================================================
+*/
+@media (max-width: 1024px) {
+    .portfolio-wrapper {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    .sidebar-header {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--cor-bordas);
+        border-right: none;
+        padding: 20px;
+    }
+
+    .logo-area {
+        margin-bottom: 0;
+        flex-direction: row;
+    }
+    
+    /* Esconde a foto de perfil na versão mobile para economizar espaço */
+    .profile-pic-container {
+        display: none; 
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-header {
+        flex-direction: row; /* Mantém a navbar em linha */
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+    }
+    .logo-area {
+        gap: 8px;
+    }
+    .logo-text h1 {
+        font-size: 1.2em;
+    }
+    .logo-text span {
+        font-size: 0.8em;
+    }
+    
+    .hero-text h2 {
+        font-size: 2.2em;
+    }
+    .hero-text p {
+        font-size: 0.9em;
+    }
+}
